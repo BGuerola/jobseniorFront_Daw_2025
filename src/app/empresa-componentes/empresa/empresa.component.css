@@ -1,0 +1,31 @@
+/* .full-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* height: 100vh; 100% del alto de la pantalla */
+  /*width: 100vw;   100% del ancho de la pantalla */
+/*   background-color: #f4f4f4;
+} */
+
+
+/* .logo img {
+  width: 50px; /* ajusta el tamaño según sea necesario
+  height: auto;
+} */
+
+/* .texto {
+  flex-grow: 1; */ /* para que ocupe el espacio restante */
+/*   text-align: center;
+} */
+
+/* .enlaces a {
+  margin-left: 20px; */ /* espacio entre enlaces */
+/*   color: white;
+  text-decoration: none;
+} */
+
+/* Opcional: Estilos para los enlaces cuando se pasan sobre ellos */
+/* .enlaces a:hover {
+  text-decoration: underline;
+} */

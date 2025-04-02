@@ -1,0 +1,13 @@
+ h1 {
+  text-align: center;
+}
+
+.contenedor {
+display: flex;
+flex-direction: row;
+}
+
+.columna {
+width: 100%;
+padding: 20px;
+}

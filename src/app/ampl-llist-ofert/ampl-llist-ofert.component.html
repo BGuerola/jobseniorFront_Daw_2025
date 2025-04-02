@@ -1,0 +1,67 @@
+
+<div class="alinear">
+       <!-- Fecha -->
+       <div class="columna2">
+        <label for="fecha">Fecha</label>
+        <input class="input2" type="text" [value]="oferta?.fecha || 'Sin Fecha'" readonly>
+      </div>
+
+      <!-- Empresa -->
+      <div class="columna2">
+        <label for="empresa">Empresa</label>
+        <input class="input2"type="text" [value]="oferta?.empresa?.nombre || 'Sin empresa'" readonly>
+      </div>
+
+      <!-- Profesión -->
+      <div class="columna2">
+        <label for="nompuesto">Nombre Puesto</label>
+        <input class="input2"type="text" [value]="oferta?.profesion?.nombreProfesion || 'Sin puesto'" readonly>
+      </div>
+
+      <!-- Provincia -->
+      <div class="columna2">
+        <label for="provincia">Provincia</label>
+        <input class="input2"type="text" [value]="oferta?.provincia?.nombreProvincia || 'Sin provincia'" readonly>
+      </div>
+
+      <!-- Botón para ampliar oferta -->
+      <div class="columna2">
+        <label for="entrar">&nbsp;</label>
+        <button (click)="irAFiltre()">Inscribirse</button>
+      </div>
+</div>
+
+<div class="contenedor2">
+  <div class="columna">
+    <label for="presentacion">Descripción de la Oferta </label>
+    <div>
+      <textarea id="presentacion" name="presentacion"></textarea>
+    </div>
+  </div>
+</div>
+
+<div style="height: 30px;"></div>
+
+<form class="form-horizontal2">
+    <h2 class="titulo-formulario">Inscripción a la oferta</h2>
+
+    <div class="contenedor">
+      <div class="columna">
+        <label for="presentacion">Carta de motivación</label>
+        <div>
+          <textarea id="presentacion" name="presentacion"
+            placeholder="Cuenta tu motivación para participar en el proceso, una breve descripción de ti mismo y por qué crees que eres un buen candidato">
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="contenedor">
+      <div class="columna boton-contenedor">
+        <button id="entrar" name="entrar" class="btn btn-primary" (click)="inscribirse(oferta)">
+          <strong>Inscribirse</strong>
+        </button>
+      </div>
+    </div>
+</form>
+

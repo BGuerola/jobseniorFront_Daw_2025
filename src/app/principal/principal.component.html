@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body id="body">
+
+<app-header></app-header>
+<!-- <router-outlet></router-outlet> -->
+<nav>
+  <div class="menuitem">
+    <!-- <a (click)="cargarCandidat()" class="textnav">Página candidatos</a> -->
+    <a routerLink="/cand">Página candidatos</a>
+    <!-- <a (click)="cargarEmpresa()" class="textnav">Página empresas</a> -->
+    <a routerLink="/emp">Página empresas</a>
+    <!-- <a routerLink="/cand" routerLinkActive="active">Página candidatos</a> -->
+    <!-- <a routerLink="/emp" routerLinkActive="active">Página empresa</a> -->
+  </div>
+</nav>
+
+<main>
+
+  <!-- para crear espacio en blanco -->
+<div style="height: 60px;"></div>
+
+
+<!-- Componente o elemento se crea/destruye del DOM -->
+
+<!-- <div [ngSwitch]="componenteActual">
+  <app-filtre-ofertes
+    *ngSwitchCase="'filtro'"
+    (cambiarComponente)="cambiarVista($event)">
+  </app-filtre-ofertes>
+
+  <app-ampl-llist-ofert
+    *ngSwitchCase="'ampl-llist-ofert'"
+    (cambiarComponente)="cambiarVista($event)">
+  </app-ampl-llist-ofert>
+</div> -->
+
+<!-- principal.component.html -->
+<!-- <div [ngSwitch]="vista">
+  <app-filtre-ofertes
+    *ngSwitchCase="'filtre-ofertes'"
+    (cambiarComponente)="cambiarVista($event)">
+  </app-filtre-ofertes> -->
+
+  <!-- Usamos *ngIf para asegurar que ofertaSeleccionada no sea null -->
+<!--   <app-ampl-llist-ofert
+    *ngSwitchCase="'ampl-llist-ofert'"
+    [oferta]="ofertaSeleccionada"
+    *ngIf="ofertaSeleccionada">
+  </app-ampl-llist-ofert>
+</div> -->
+
+<!-- principal.component.html -->
+<div>
+  <app-filtre-ofertes
+    *ngIf="vista === 'filtre-ofertes'"
+    (cambiarComponente)="cambiarVista($event)">
+  </app-filtre-ofertes>
+
+  <app-ampl-llist-ofert
+    *ngIf="vista === 'ampl-llist-ofert'"
+    [oferta]="ofertaSeleccionada">
+  </app-ampl-llist-ofert>
+</div>
+
+
+
+<!-- <app-filtre-ofertes (cambiarComponente)="cambiarVista($event)"></app-filtre-ofertes>
+
+<app-ampl-ofert-cand
+  *ngIf="vista === 'ampl-llist-ofert'&& ofertaSeleccionada !== null"
+  [oferta]="ofertaSeleccionada">
+</app-ampl-ofert-cand>
+ -->
+<!-- Solo se muestra si ofertaSeleccionada no es null -->
+<!-- <app-ampl-ofert-cand
+  *ngIf="ofertaSeleccionada"
+  [oferta]="ofertaSeleccionada">
+</app-ampl-ofert-cand> -->
+
+<!-- <app-filtre-ofertes></app-filtre-ofertes> -->
+
+
+<!-- <app-ampl-llist-ofert></app-ampl-llist-ofert> -->
+
+</main>
+
+
+<app-footer></app-footer>
+
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+/* main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  }
+ */
+ h1 {
+  text-align: center;
+}
+
+section {
+/* width: 80%;
+max-width: 1000px; */
+background-color: #dad5d5;;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+margin: 10px auto;
+}
+
+.contenedor {
+display: flex;
+flex-direction: row;
+}
+
+.columna {
+width: 100%;
+padding: 20px;
+/* border-radius: 5px; */
+}

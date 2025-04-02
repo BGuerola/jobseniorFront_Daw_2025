@@ -1,0 +1,21 @@
+/* main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  }
+ */
+/*   body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;  */ /* Esto asegura que los elementos hijos ocupen todo el ancho */
+/*   } */
+
+app-root {
+    height: 100%;
+    margin: 0;
+  }
+router-outlet {
+    display: block;
+    height: 100%;
+  }
