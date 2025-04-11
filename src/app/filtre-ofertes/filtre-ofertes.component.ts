@@ -27,6 +27,7 @@ export class FiltreOfertesComponent implements OnInit {
   empresas: string[] = [];
   profesiones: string[] = [];
   provincias: string[] = [];
+  descripcion: string[] = []; //proba
 
   // Valores seleccionados en los filtros
   filtros: any = {
@@ -34,6 +35,7 @@ export class FiltreOfertesComponent implements OnInit {
     empresa: '',
     profesion: '',
     provincia: '',
+    descripcion: ''
   };
 
   // Datos de las ofertas (lista completa y lista filtrada)
@@ -56,6 +58,7 @@ export class FiltreOfertesComponent implements OnInit {
       this.empresas = [...new Set(ofertas.map(oferta => oferta.empresa?.nombre))];
       this.profesiones = [...new Set(ofertas.map(oferta => oferta.profesion?.nombreProfesion))];
       this.provincias = [...new Set(ofertas.map(oferta => oferta.provincia?.nombreProvincia))];
+      this.descripcion = [...new Set(ofertas.map(oferta => oferta.descripcion))];
     });
   }
 
@@ -64,7 +67,8 @@ export class FiltreOfertesComponent implements OnInit {
       (!this.filtros.fecha || oferta.fecha === this.filtros.fecha) &&
       (!this.filtros.empresa || oferta.empresa?.nombre === this.filtros.empresa) &&
       (!this.filtros.profesion || oferta.profesion?.nombreProfesion === this.filtros.profesion) &&
-      (!this.filtros.provincia || oferta.provincia?.nombreProvincia === this.filtros.provincia)
+      (!this.filtros.provincia || oferta.provincia?.nombreProvincia === this.filtros.provincia) &&
+      (!this.filtros.descripcion || oferta.descripcion === this.filtros.descripcion)
     );
   }
 

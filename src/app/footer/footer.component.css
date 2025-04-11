@@ -1,17 +1,3 @@
-/* footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: rgb(247, 247, 247);
-  padding: 20px;
-} */
-
-/* .logo img {
-  width: 50px; /* ajusta el tamaño según sea necesario
-  height: auto;
-} */
-
 .texto {
   flex-grow: 1; /* para que ocupe el espacio restante */
   text-align: center;

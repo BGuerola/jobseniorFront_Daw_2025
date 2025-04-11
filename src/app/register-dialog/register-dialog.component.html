@@ -1,5 +1,3 @@
-<!-- register.component.html -->
-
 <div class="register">
   <form class="custom-form" method="post">
     <h1>Registro</h1>
@@ -27,11 +25,14 @@
     <div>
       <label for="type">Tipo</label>
       <select id="type" [(ngModel)]="type" name="type" required>
-        <option value="company">Empresa</option>
-        <option value="candidate">Candidato</option>
+        <option value="empresa">empresa</option>
+        <option value="candidato">candidato</option>
       </select>
     </div>
 
     <button type="submit" (click)="register()">Register</button>
   </form>
+</div>
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
 </div>

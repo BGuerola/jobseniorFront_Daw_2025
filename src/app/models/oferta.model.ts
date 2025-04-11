@@ -21,3 +21,5 @@ export interface Oferta {
   provincia: Provincia;
   descripcion: string;
 }
+
+

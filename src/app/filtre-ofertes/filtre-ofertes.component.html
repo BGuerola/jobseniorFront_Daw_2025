@@ -1,55 +1,3 @@
-<!-- <h3 style="text-align: center;">Filtro de búsqueda de ofertas de empleo</h3>
-<form class="form-horizontal" >
-  <fieldset>
-
-    <div class = "contenedor">
-
-    <div class="columna">
-      <label for="Fecha de publicación">Fecha</label>
-      <div>
-      <input id="Fecha de publicación" name="Fecha de publicación" type="text" placeholder="fecha de publicación" class="form-control input-md">
-
-      </div>
-    </div>
-
-    <div class="columna" style="width: 200%;">
-      <label for="Empresa">Empresa</label>
-      <div>
-      <input id="Empresa" name="Empresa" type="text" placeholder="Empresa" class="form-control input-md">
-
-      </div>
-    </div>
-
-    <div class="columna" style="width: 200%;">
-      <label for="nompuesto">Nombre Puesto</label>
-      <div>
-      <input id="nompuesto" name="nompuesto" type="text" placeholder="Nombre Puesto" class="form-control input-md">
-
-      </div>
-    </div>
-
-    <div class="columna">
-      <label for="Provincia">Provincia</label>
-      <div>
-      <input id="Provincia" name="Provincia" type="text" placeholder="Provincia" class="form-control input-md">
-
-      </div>
-    </div>
-
-    <div class="columna">
-      <label for="entrar">&nbsp;</label>
-      <div>
-        <button id="entrar" name="entrar" class="btn btn-primary">&nbsp;<strong>Aplicar filtro</strong>&nbsp;</button>
-      </div>
-    </div>
-
-  </div>
-
-  </fieldset>
-  </form> -->
-
-
-
   <h3 style="text-align: center;">Filtro de búsqueda de ofertas de empleo</h3>
   <form class="form-horizontal2">
     <fieldset>
@@ -114,17 +62,17 @@
 
       <!-- Empresa -->
       <div class="columna2">
-        <input class="input2"type="text" [value]="oferta.empresa?.nombre || 'Sin empresa'" readonly>
+        <input class="input2"type="text" [value]="oferta.empresa.nombre || 'Sin empresa'" readonly>
       </div>
 
       <!-- Profesión -->
       <div class="columna2">
-        <input class="input2"type="text" [value]="oferta.profesion?.nombreProfesion || 'Sin puesto'" readonly>
+        <input class="input2"type="text" [value]="oferta.profesion.nombreProfesion || 'Sin puesto'" readonly>
       </div>
 
       <!-- Provincia -->
       <div class="columna2">
-        <input class="input2"type="text" [value]="oferta.provincia?.nombreProvincia || 'Sin provincia'" readonly>
+        <input class="input2"type="text" [value]="oferta.provincia.nombreProvincia || 'Sin provincia'" readonly>
       </div>
 
       <!-- Botón para ampliar oferta -->

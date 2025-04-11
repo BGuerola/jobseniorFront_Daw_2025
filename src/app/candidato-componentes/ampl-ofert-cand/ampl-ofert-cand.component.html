@@ -1,4 +1,3 @@
-
 <div class="alinear" background-color: #dad5d5;>
        <!-- Fecha -->
        <div class="columna2">
@@ -24,18 +23,19 @@
         <input class="input2"type="text" [value]="oferta.provincia?.nombreProvincia || 'Sin provincia'" readonly>
       </div>
 
-      <!-- Botón para ampliar oferta -->
+      <!-- Botón para inscribirse -->
       <div class="columna2">
         <label for="entrar">&nbsp;</label>
         <button (click)="AInscritos(oferta)">Inscribirse</button>
       </div>
+
 </div>
 
 <div class="contenedor2">
   <div class="columna">
     <label for="presentacion">Descripción de la Oferta </label>
     <div>
-      <textarea id="presentacion" name="presentacion"></textarea>
+      <textarea id="presentacion" name="presentacion" [innerHTML]="oferta?.descripcion || 'Sin descripción'" readonly></textarea>
     </div>
   </div>
 </div>

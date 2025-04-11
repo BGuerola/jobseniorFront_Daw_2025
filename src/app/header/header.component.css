@@ -1,4 +1,3 @@
-/* Estilos generales para el header */
 header.navbar {
   display: flex;
   justify-content: space-between;
@@ -14,14 +13,11 @@ header.navbar img {
   height: auto;
 }
 
-/* Estilo para el contenedor de los enlaces */
 header.navbar div {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-
-/* Estilo para los enlaces (Log in y Register) */
 header.navbar a.h6 {
   text-decoration: none;
   color: inherit; /* Color por defecto */
@@ -30,18 +26,15 @@ header.navbar a.h6 {
   transition: color 0.3s, transform 0.3s ease; /* Transición suave */
 }
 
-/* Efecto hover en los enlaces */
 header.navbar a.h6:hover {
   color: white !important; /* Cambio de color al pasar el mouse */
   transform: scale(1.1); /* Efecto de agrandar ligeramente al hacer hover */
 }
 
-/* Separador | entre los enlaces */
 header.navbar span.h6 {
   color: #ccc; /* Color gris para el separador */
 }
 
-/* Estilo para los cuadros de diálogo */
 header.navbar a.h6:focus {
   outline: none; /* Elimina el borde del enfoque */
   color: white;

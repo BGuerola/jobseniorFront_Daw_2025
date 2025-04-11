@@ -20,6 +20,7 @@ import { CrearOfertComponent } from './crear-ofert/crear-ofert.component';
 import { GestionCandComponent } from './empresa-componentes/gestion-cand/gestion-cand.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AmplOfertCandComponent } from './candidato-componentes/ampl-ofert-cand/ampl-ofert-cand.component';
+import { CookieService } from "ngx-cookie-service";
 
 
 
@@ -52,7 +53,8 @@ import { AmplOfertCandComponent } from './candidato-componentes/ampl-ofert-cand/
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    CookieService
   ],
   bootstrap: [AppComponent],
 })

@@ -6,7 +6,6 @@
 <form class="form-horizontal">
 <fieldset>
 <!-- Form Name -->
-<legend>Candidato</legend>
 
 <div class = "contenedor">
     <!-- Text input-->
@@ -19,17 +18,17 @@
 
     <!-- Text input-->
     <div class="columna">
-      <label for="apellido1">email</label>
+      <label for="email">email</label>
       <div>
-      <input id="apellido1" name="apellido1" type="text" placeholder="email">
+      <input id="email" name="email" type="text" placeholder="email">
       </div>
     </div>
 
     <!-- Text input-->
     <div class="columna">
-      <label for="apellido2">link</label>
+      <label for="link">link</label>
       <div>
-      <input id="apellido2" name="apellido2" type="text" placeholder="link">
+      <input id="link" name="link" type="text" placeholder="link">
 
       </div>
     </div>
@@ -39,7 +38,22 @@
   <div class="columna">
     <label for="presentacion">Presentación</label>
     <div>
-      <textarea id="presentacion" name="presentacion"></textarea>
+      <textarea
+        id="presentacion"
+        name="presentacion"
+        rows="10"
+        placeholder="Escribe una breve presentación sobre ti, tu experiencia, intereses o cualquier información relevante...">
+      </textarea>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="columna">
+      <label for="entrar">&nbsp;</label>
+      <button type="button" class="btn btn-primary">
+        <!-- (click)="editarCV()"> -->
+        Editar
+      </button>
     </div>
   </div>
 </div>

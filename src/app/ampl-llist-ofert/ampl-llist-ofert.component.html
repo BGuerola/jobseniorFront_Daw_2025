@@ -35,7 +35,7 @@
   <div class="columna">
     <label for="presentacion">Descripción de la Oferta </label>
     <div>
-      <textarea id="presentacion" name="presentacion"></textarea>
+      <textarea id="presentacion" name="presentacion" [innerHTML]="oferta?.descripcion || 'Sin descripción'" readonly></textarea>
     </div>
   </div>
 </div>
