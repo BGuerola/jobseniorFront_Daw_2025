@@ -20,9 +20,7 @@ h1 {
 
 .columna {
   flex: 1 1 30%;
-  /* background-color: #f8f8f8; */
   padding: 15px;
-  /* border: 1px solid #ccc; */
   border-radius: 8px;
   height: auto;
   box-sizing: border-box;

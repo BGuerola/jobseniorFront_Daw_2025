@@ -17,23 +17,16 @@
 
     constructor(private router: Router, public loginService: LoginService) {}
     close(): void {
-      window.close(); // Cierra la ventana independiente
+      window.close();
     }
 
     login() {
       const user = { nombre: this.username, contrasena: this.password };
       this.loginService.login(user).subscribe({
         next:(response: any) => {
-          this.errorMessage = null; // Limpia errores anteriores
-          console.log({
-            username: this.username,
-            password: this.password,
-            //id: response.id,
-            tipo: response.tipo
-          });
-
+          this.errorMessage = null;
+          alert("te has logueado correctamente");
           this.loginService.setLoginCookies(response.tipo, response.id);
-
           this.router.navigate(['/']);
         },
         error:(error) => {
@@ -42,5 +35,4 @@
         }
       });
     }
-
   }

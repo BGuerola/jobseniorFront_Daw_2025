@@ -13,16 +13,14 @@
 
 <nav>
   <div class="menuitem">
-    <a routerLink="/cand">Página candidatos</a>
-    <a routerLink="/emp">Página empresas</a>
+    <a *ngIf="tipoUsuario === 'candidato'" routerLink="/cand">Página candidatos</a>
+    <a *ngIf="tipoUsuario === 'empresa'" routerLink="/emp">Página empresas</a>
   </div>
 </nav>
 
 <main>
 
-  <!-- para crear espacio en blanco -->
 <div style="height: 60px;"></div>
-
 
 <div>
   <app-filtre-ofertes
@@ -42,4 +40,3 @@
 
 </body>
 </html>
-

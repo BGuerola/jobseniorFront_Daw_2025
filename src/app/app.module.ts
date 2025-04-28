@@ -17,10 +17,12 @@ import { InscritosComponent } from './candidato-componentes/inscritos/inscritos.
 import { AmplLlistOfertComponent } from './ampl-llist-ofert/ampl-llist-ofert.component';
 import { DescriEmpComponent } from './empresa-componentes/descri-emp/descri-emp.component';
 import { CrearOfertComponent } from './crear-ofert/crear-ofert.component';
-import { GestionCandComponent } from './empresa-componentes/gestion-cand/gestion-cand.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AmplOfertCandComponent } from './candidato-componentes/ampl-ofert-cand/ampl-ofert-cand.component';
 import { CookieService } from "ngx-cookie-service";
+import { PuestosofertadosComponent } from './empresa-componentes/puestosofertados/puestosofertados.component';
+import { OfertasycandComponent } from './empresa-componentes/ofertasycand/ofertasycand.component';
+import { PostuladoComponent } from './empresa-componentes/postulado/postulado.component';
 
 
 
@@ -40,8 +42,10 @@ import { CookieService } from "ngx-cookie-service";
     AmplLlistOfertComponent,
     DescriEmpComponent,
     CrearOfertComponent,
-    GestionCandComponent,
-    AmplOfertCandComponent
+    AmplOfertCandComponent,
+    PuestosofertadosComponent,
+    OfertasycandComponent,
+    PostuladoComponent
 
   ],
   imports: [
@@ -49,7 +53,6 @@ import { CookieService } from "ngx-cookie-service";
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-
   ],
   providers: [
     provideClientHydration(),

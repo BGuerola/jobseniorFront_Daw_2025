@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../servicios/login.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   showDialog = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public loginService: LoginService) {}
 
   openDialog(): void {
     this.router.navigate(['login-dialog']);
@@ -18,6 +19,13 @@ export class HeaderComponent {
   openRegisterDialog(): void {
     this.router.navigate(['register-dialog']);
   }
+
+  borrarSesion(): void {
+    this.loginService.clearLoginCookies();
+  }
+
+
+
 
 }
 

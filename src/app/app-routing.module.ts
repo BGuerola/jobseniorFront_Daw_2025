@@ -8,6 +8,10 @@ import { PrincipalComponent } from './principal/principal.component';
 import { InscritosComponent } from './candidato-componentes/inscritos/inscritos.component';
 import { AmplLlistOfertComponent } from './ampl-llist-ofert/ampl-llist-ofert.component';
 import { AmplOfertCandComponent } from './candidato-componentes/ampl-ofert-cand/ampl-ofert-cand.component';
+import { CrearOfertComponent } from './crear-ofert/crear-ofert.component';
+import { OfertasycandComponent } from './empresa-componentes/ofertasycand/ofertasycand.component';
+import { PostuladoComponent } from './empresa-componentes/postulado/postulado.component';
+
 
 const routes: Routes = [
   { path: '', component: PrincipalComponent },
@@ -17,7 +21,11 @@ const routes: Routes = [
   { path: 'emp', component: EmpresaComponent },
   { path: 'insc',component: InscritosComponent},
   { path: 'ampl-llist-ofert', component: AmplLlistOfertComponent },
-  { path: 'ampl-ofert-cand', component: AmplOfertCandComponent }
+  { path: 'ampl-ofert-cand', component: AmplOfertCandComponent },
+  { path: 'ampliarinscripcion/:idoferta/:idcandidato', component: AmplOfertCandComponent },
+  { path: 'crearoferta', component: CrearOfertComponent},
+  { path: 'ofertesycand/:idoferta', component: OfertasycandComponent },
+  { path: 'postulado/:idoferta/:idcandidato', component: PostuladoComponent},
 ];
 
 @NgModule({

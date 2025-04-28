@@ -7,16 +7,30 @@ import { Candidato } from '../models/candidato.model';
   providedIn: 'root'
 })
 export class CandidatoService {
+  private apiUrl = 'http://localhost:8080/api/candidatos';
 
   constructor(private http: HttpClient) { }
 
-  editCandidato(user: { idcandidato: number; nombre: string;
-                        correo: string;url: string;contrasena: string;
-                        descripcion: string; }): Observable<Candidato> {
-    return this.http.post<Candidato>("http://localhost:8080/api/candidatos/guardar", user);
+
+  getCandidatoById(id: number): Observable<Candidato> {
+    return this.http.get<Candidato>(`${this.apiUrl}/${id}`);
   }
 
+  getCandidatosByIdoferta(idoferta: number): Observable<Candidato[]> {
+    return this.http.get<Candidato[]>(`${this.apiUrl}/oferta/${idoferta}`);
+  }
 
+  updateCandidato(id: number, candidato: Partial<Candidato>): Observable<Candidato> {
+        return this.http.put<Candidato>(`${this.apiUrl}/${id}`, candidato);
+  }
+
+  comprobarExistenciaCandidato(id: number): Observable<boolean> {
+    console.log('He entrat en el metode comprobarExistenciaCandidato: ',id);
+    return this.http.get<boolean>(`${this.apiUrl}/existe/${id}`);
+  }
+
+  createCandidato(idcandidato: number): Observable<Candidato> {
+    console.log('He entrat en el metode crear candidat: ',idcandidato);
+    return this.http.post<Candidato>(`${this.apiUrl}/crear/${idcandidato}`, {});
+  }
 }
-
-

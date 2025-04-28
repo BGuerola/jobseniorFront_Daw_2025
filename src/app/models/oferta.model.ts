@@ -1,25 +1,23 @@
 export interface Empresa {
-  idEmpresa: number;
+  idempresa: number;
   nombre: string;
 }
 
 export interface Profesion {
-  idProfesion: number;
-  nombreProfesion: string;
+  idprofesion: number;
+  nombreprofesion: string;
 }
 
 export interface Provincia {
-  idProvincia: number;
-  nombreProvincia: string;
+  idprovincia: number;
+  nombreprovincia: string;
 }
 
 export interface Oferta {
-  idOferta: number;
+  idoferta?: number;
   fecha: string;
   empresa: Empresa;
   profesion: Profesion;
   provincia: Provincia;
   descripcion: string;
 }
-
-

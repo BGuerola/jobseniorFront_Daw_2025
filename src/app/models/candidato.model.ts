@@ -1,5 +1,5 @@
 export interface Candidato {
-    idcandidato: number;
+    idcandidato?: number;
     nombre: string;
     correo: string;
     url: string;

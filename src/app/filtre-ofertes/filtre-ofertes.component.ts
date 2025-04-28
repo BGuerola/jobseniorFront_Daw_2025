@@ -13,7 +13,7 @@ export class FiltreOfertesComponent implements OnInit {
   @Output() cambiarComponente = new EventEmitter<{componente: string, oferta: Oferta}>();
 
   irAmpList(oferta: Oferta | null) {
-    if (oferta) {  // Comprobamos si oferta no es null ni undefined
+    if (oferta) {
       console.log('Ampliando oferta:', oferta);
       this.cambiarComponente.emit({ componente: 'ampl-llist-ofert', oferta });
     } else {
@@ -21,15 +21,12 @@ export class FiltreOfertesComponent implements OnInit {
     }
   }
 
-
-  // Datos para los filtros
   fechas: string[] = [];
   empresas: string[] = [];
   profesiones: string[] = [];
   provincias: string[] = [];
-  descripcion: string[] = []; //proba
+  descripcion: string[] = [];
 
-  // Valores seleccionados en los filtros
   filtros: any = {
     fecha: '',
     empresa: '',
@@ -38,7 +35,6 @@ export class FiltreOfertesComponent implements OnInit {
     descripcion: ''
   };
 
-  // Datos de las ofertas (lista completa y lista filtrada)
   todasLasOfertas: Oferta[] = [];
   ofertasFiltradas: Oferta[] = [];
 
@@ -52,24 +48,20 @@ export class FiltreOfertesComponent implements OnInit {
     this.filtroOfertasService.getOfertas({}).subscribe(ofertas => {
       this.todasLasOfertas = ofertas;
       this.ofertasFiltradas = ofertas;
-
-      // Extraer valores únicos para los filtros
       this.fechas = [...new Set(ofertas.map(oferta => oferta.fecha))];
       this.empresas = [...new Set(ofertas.map(oferta => oferta.empresa?.nombre))];
-      this.profesiones = [...new Set(ofertas.map(oferta => oferta.profesion?.nombreProfesion))];
-      this.provincias = [...new Set(ofertas.map(oferta => oferta.provincia?.nombreProvincia))];
+      this.profesiones = [...new Set(ofertas.map(oferta => oferta.profesion?.nombreprofesion))];
+      this.provincias = [...new Set(ofertas.map(oferta => oferta.provincia?.nombreprovincia))];
       this.descripcion = [...new Set(ofertas.map(oferta => oferta.descripcion))];
     });
   }
-
   aplicarFiltro() {
     this.ofertasFiltradas = this.todasLasOfertas.filter(oferta =>
       (!this.filtros.fecha || oferta.fecha === this.filtros.fecha) &&
       (!this.filtros.empresa || oferta.empresa?.nombre === this.filtros.empresa) &&
-      (!this.filtros.profesion || oferta.profesion?.nombreProfesion === this.filtros.profesion) &&
-      (!this.filtros.provincia || oferta.provincia?.nombreProvincia === this.filtros.provincia) &&
+      (!this.filtros.profesion || oferta.profesion?.nombreprofesion === this.filtros.profesion) &&
+      (!this.filtros.provincia || oferta.provincia?.nombreprovincia === this.filtros.provincia) &&
       (!this.filtros.descripcion || oferta.descripcion === this.filtros.descripcion)
     );
   }
-
 }

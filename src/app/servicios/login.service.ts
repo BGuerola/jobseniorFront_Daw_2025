@@ -21,8 +21,9 @@ export class LoginService {
   }
 
   setLoginCookies(tipo: string, id: number) {
-    this.cookies.set("tipo", tipo);
-    this.cookies.set("id", id.toString());
+    const expiryDays = 1;
+    this.cookies.set("tipo", tipo, 1, '/');
+    this.cookies.set("id", id.toString(), 1, '/');
   }
 
   getTipo(): string {
@@ -33,4 +34,8 @@ export class LoginService {
     return Number(this.cookies.get("id"));
   }
 
+  clearLoginCookies() {
+    this.cookies.delete("tipo", "/");
+    this.cookies.delete("id", "/");
+  }
 }

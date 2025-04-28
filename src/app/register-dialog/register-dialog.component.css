@@ -49,3 +49,11 @@ h1 {
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
 }
+
+.error-message {
+  text-align: center;
+  font-size: 2rem;
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}

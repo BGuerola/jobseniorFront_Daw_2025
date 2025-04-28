@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { InscritosComponent } from '../inscritos/inscritos.component';
 import { Router } from '@angular/router';
 
 @Component({

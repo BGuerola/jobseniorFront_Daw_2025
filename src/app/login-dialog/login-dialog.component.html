@@ -19,8 +19,8 @@
     <div>
       <label for="type">Tipo</label>
       <select id="type" [(ngModel)]="type" name="type" required>
-        <option value="empresa">Empresa</option>
-        <option value="candidato">Candidato</option>
+        <option value="empresa">empresa</option>
+        <option value="candidato">candidato</option>
       </select>
     </div>
 
@@ -28,5 +28,6 @@
   </form>
 </div>
 <div *ngIf="errorMessage" class="error-message">
+  <div style="height: 40px;"></div>
   {{ errorMessage }}
 </div>

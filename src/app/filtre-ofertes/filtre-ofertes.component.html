@@ -55,27 +55,22 @@
 
     <div *ngFor="let oferta of ofertasFiltradas" class="contenedor">
 
-      <!-- Fecha -->
       <div class="columna2">
         <input class="input2" type="text" [value]="oferta.fecha" readonly>
       </div>
 
-      <!-- Empresa -->
       <div class="columna2">
         <input class="input2"type="text" [value]="oferta.empresa.nombre || 'Sin empresa'" readonly>
       </div>
 
-      <!-- Profesión -->
       <div class="columna2">
-        <input class="input2"type="text" [value]="oferta.profesion.nombreProfesion || 'Sin puesto'" readonly>
+        <input class="input2"type="text" [value]="oferta.profesion.nombreprofesion || 'Sin puesto'" readonly>
       </div>
 
-      <!-- Provincia -->
       <div class="columna2">
-        <input class="input2"type="text" [value]="oferta.provincia.nombreProvincia || 'Sin provincia'" readonly>
+        <input class="input2"type="text" [value]="oferta.provincia.nombreprovincia || 'Sin provincia'" readonly>
       </div>
 
-      <!-- Botón para ampliar oferta -->
       <div class="columna2">
         <button (click)="irAmpList(oferta)">Ampliar oferta</button>
       </div>

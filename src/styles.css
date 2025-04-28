@@ -3,9 +3,7 @@ colores de senior talent
 negre: rgb(1, 1, 0)
 roig: rgb(170, 32, 45)
 gris: rgb(96, 88, 85)
-
 */
-
 
 html{
   font: size 62.5%;
@@ -15,7 +13,7 @@ html{
 body {
   display: flex;
   flex-direction: column;
-  align-items: stretch;  /* Esto asegura que los elementos hijos ocupen todo el ancho */
+  align-items: stretch;
   height: 100%;
   background-color: white;
   margin: 0;
@@ -28,7 +26,6 @@ main {
   min-height: 100vh;
   width: 100%
 }
-
 
 header {
   padding:0.5rem;
@@ -61,33 +58,25 @@ color: black;
 top: 40px;
 }
 
-/* Estilos para el formulario */
-
 form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+  box-sizing: border-box;
   border-radius: 10px;
-  width: 60%; /* Ajusta según el ancho deseado */
-  margin-left: 20vw; /* 25% del ancho de la ventana */
+  width: 60%;
+  margin-left: 20vw;
 }
-
-/* Estilos para el fieldset */
 
 fieldset {
   border: none;
   padding: 0;
 }
 
-/* Estilos para la etiqueta */
-
 label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-
-/* Estilos para el textarea */
 
 textarea {
   width: 100%;
@@ -98,8 +87,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* Estilos para el input */
-
 input{
   width: 100%;
   padding: 10px;
@@ -108,14 +95,10 @@ input{
   margin-bottom: 10px;
 }
 
-/* Estilos para el span */
-
 span {
   color: red;
   font-size: 12px;
 }
-
-/* Estilos para el select */
 
 select {
   width: 100%;
@@ -124,8 +107,6 @@ select {
   border-radius: 5px;
   margin-bottom: 10px;
 }
-
-/* Estilos para el botón */
 
 button {
   width: 100%;
@@ -149,5 +130,3 @@ footer {
   color: rgb(247, 247, 247);
   padding: 20px;
 }
-
-
